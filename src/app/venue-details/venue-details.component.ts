@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-venue-details',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VenueDetailsComponent implements OnInit {
 
+  @Input() venue: any;
+  
   constructor() { }
 
   ngOnInit() {

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AuthComponentComponent } from './auth-component/auth-component.component';
@@ -15,6 +16,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { VenueComponent } from './venue/venue.component';
 import { VenueDetailsComponent } from './venue-details/venue-details.component';
 import { VenueInformationComponent } from './venue-information/venue-information.component';
+import { ErrorComponent } from './auth-component/error/error.component';
 
 const routes: Routes = [
   {
@@ -78,10 +80,14 @@ const routes: Routes = [
     UserProfileComponent,
     VenueComponent,
     VenueDetailsComponent,
-    VenueInformationComponent
+    VenueInformationComponent,
+    ErrorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

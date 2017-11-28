@@ -1,3 +1,8 @@
-<p>
-  my-venues works!
-</p>
+<div class="myVenues container">
+	<h2>My Venues</h2>
+	<ul class="venue-list">
+		<li *ngFor="let venue of myVenues | async">
+			{{ venue.name }}
+		</li>
+	</ul>
+</div>
