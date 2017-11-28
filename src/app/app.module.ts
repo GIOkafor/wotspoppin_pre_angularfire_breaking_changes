@@ -18,6 +18,12 @@ import { VenueDetailsComponent } from './venue-details/venue-details.component';
 import { VenueInformationComponent } from './venue-information/venue-information.component';
 import { ErrorComponent } from './auth-component/error/error.component';
 
+//services
+import { AuthService } from './services/auth.service';
+import { BuddiesService } from './services/buddies.service';
+import { PaymentService } from './services/payment.service';
+import { VenuesService } from './services/venues-service.service';
+
 const routes: Routes = [
   {
     path: '',
@@ -89,7 +95,12 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    BuddiesService,
+    PaymentService,
+    VenuesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
